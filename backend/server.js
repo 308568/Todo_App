@@ -2,8 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-import todoRoute from "../backend/routes/todo.route.js";
-import userRoute from "../backend/routes/user.route.js";
+import todoRoute from "./routes/todo.route.js";
+import userRoute from "./routes/user.route.js";
 import cookieParser from "cookie-parser";
 const app = express();
 dotenv.config();
@@ -36,5 +36,5 @@ app.use("/todo", todoRoute);
 app.use("/user", userRoute);
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
